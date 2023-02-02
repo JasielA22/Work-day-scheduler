@@ -10,77 +10,81 @@ setInterval(function(today){
 
 
 //array for objects for each time slot
-let scheduler = [
-{
-  time: "6am",
-  num: 6,
-  text: ""
-},
-{
-  time: "7am",
-  num: 7,
-  text: ""
-},
-{
-  time: "8am",
-  num: 8,
-  text: ""
-},
-{
-  time: "9am",
-  num: 9,
-  text: ""
-},
-{
-  time: "10am",
-  num: 10,
-  text: ""
-},
-{
-  time: "11am",
-  num: 11,
-  text: ""
-},
-{
-  time: "12pm",
-  num: 12,
-  text: ""
-},
-{
-  time: "1pm",
-  num: 13,
-  text: ""
-},
-{
-  time: "2pm",
-  num: 14,
-  text: ""
-},
-{
-  time: "3pm",
-  num: 15,
-  text: ""
-},
-{
-  time: "4pm",
-  num: 16,
-  text: ""
-},
-{
-  time: "5pm",
-  num: 17,
-  text: ""
-},
-{
-  time: "6pm",
-  num: 18,
-  text: ""
+
+var allTimeBlocks = document.querySelectorAll(".time-block")
+
+ var currentTime = 11             //dayjs().format('HH');
+console.log(currentTime)
+
+for (var i = 0; i < allTimeBlocks.length; i++) {  // for loop
+ console.log(allTimeBlocks[i].id)
+ var timeBlockHour = parseInt(allTimeBlocks[i].id)
+ if (currentTime > timeBlockHour)  {
+  allTimeBlocks[i].classList.add("past")
+ } else if (currentTime < timeBlockHour) {
+  allTimeBlocks[i].classList.add ("future")
+ } else if (currentTime = timeBlockHour) {
+  allTimeBlocks[i].classList.add ("present")
+ }
 }
-];
-var currentHour = dayjs().hour()
+
+let scheduler = [
+  {
+    time: "8am",
+    num: 8,
+    text: ""
+  },
+  {
+    time: "9am",
+    num: 9,
+    text: ""
+  },
+  {
+    time: "10am",
+    num: 10,
+    text: ""
+  },
+  {
+    time: "11am",
+    num: 11,
+    text: ""
+  },
+  {
+    time: "12pm",
+    num: 12,
+    text: ""
+  },
+  {
+    time: "1pm",
+    num: 13,
+    text: ""
+  },
+  {
+    time: "2pm",
+    num: 14,
+    text: ""
+  },
+  {
+    time: "3pm",
+    num: 15,
+    text: ""
+  },
+  {
+    time: "4pm",
+    num: 16,
+    text: ""
+  },
+  {
+    time: "5pm",
+    num: 17,
+    text: ""
+  }
+  ];  
 
 //Code to change color depending on past or present using military time
 $(function () {
+  
+
 
 
   // TODO: Add a listener for click events on the save button. This code should
@@ -89,11 +93,6 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-
-
-
-
-
   //
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
