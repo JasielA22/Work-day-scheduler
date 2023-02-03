@@ -31,6 +31,6 @@ The application built makes it possible for the user to write on a timeblock whi
 [Click Here!](https://jasiela22.github.io/Work-day-scheduler/)
 
 ## Credits
-[DayJs](https://day.js.org/en/)
-[ProMaker Dev Local Storage Video](https://www.youtube.com/watch?v=fYTTUBa-lPc)
-Juan Delgado Tutor
+* [DayJs](https://day.js.org/en/)
+* [ProMaker Dev Local Storage Video](https://www.youtube.com/watch?v=fYTTUBa-lPc)
+* Juan Delgado Tutor
