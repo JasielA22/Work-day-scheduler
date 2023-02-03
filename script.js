@@ -34,7 +34,7 @@ $(function (){
     //   console.log(this)
     //   var input = $(this).siblings(".description").val(); 
     //   localStorage.setItem('string', input.val);
-    //   console.log(this)
+    //   console.log(this)                                        //failed attempt keeping for future reference
     // }
 
   //   for (var i = 0 ; i < btn.length; i++) {
